@@ -15,9 +15,6 @@ width: 15px;
 height: 15px;
 background-color: grey;
 `
-// const Name = styled.h3`
-
-// `
 
 const Header = () => {
   return ( 
