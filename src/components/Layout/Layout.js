@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-
+import Link from 'react-dom'
 import Header from '../Header/Header';
 import Hero from '../Hero/Hero';
 import Portfolio from '../Portfolio/Portfolio'
@@ -11,7 +11,7 @@ position: relative;
 display: grid;
 grid-template-rows: auto;
 gap: 60px;
-max-width: 1200px;
+max-width: 1250px;
 margin: 0 auto;
 padding: 0 20px;
 @media screen and (max-width: 1100px) {

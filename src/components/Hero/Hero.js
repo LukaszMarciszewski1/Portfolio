@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 // import img from '/img/user.svg';
 
-const Container = styled.div`
+const Container = styled.section`
 width: 100%;
 display: flex;
 flex-direction: column;
@@ -20,11 +20,12 @@ width:40px;
 height: 40px;
 margin-right: 30px;
 `
-
+          
 const Hero = () => {
   return ( 
     <Container>
-      <h1>Welcome to Novela, the simplest way to start publishing with Gatsby.</h1>
+      {/* <h1>Welcome to Novela, the simplest way to start publishing with Gatsby.</h1> */}
+      <h1>Jestem samoukiem i pasjonatem programowania publishing with Gatsby.</h1>
       <Autor>
         <Img src='/img/user.svg'/>
         <p>Written by You. This is where your author bio lives. Share your work, your joys and of course, your Twitter handle.</p>

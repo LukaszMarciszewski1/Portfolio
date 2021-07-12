@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #111216;
+  /* background-color: #00e677a4; */
+  /* background-color: #0289d169; */
   /* background-color: #18191d; */
   color: #fff;
 }
@@ -23,8 +25,13 @@ h3{
   line-height: 2rem; 
 }
 
-h1,h2,h4{
+h1,h2,h4,h3{
   margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
 @media screen and (max-width: 1200px) {
