@@ -5,9 +5,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #111216;
+  color: #fff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+h1{
+  font-size: 3.3rem;
+  line-height: 4.5rem;
+}
+
+h1,h2,h3,h4,h5{
+  margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  h1{
+    /* font-size: 2.5rem;
+    line-height: 3.3rem; */
+  }
+}
+@media screen and (max-width: 600px) {
+
+}
+
