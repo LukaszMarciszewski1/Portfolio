@@ -19,7 +19,7 @@ const Theme = styled.div`
 const Header = () => {
   return (
     <Name>
-      <h2>Lukasz Marciszewski</h2>
+      <h2>Cześć, nazywam się Łukasz</h2>
       <Theme />
     </Name>
   )

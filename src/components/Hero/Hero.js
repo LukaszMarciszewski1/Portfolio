@@ -12,7 +12,7 @@ const Autor = styled.div`
 margin-top: 80px;
 display: flex;
 align-items: center;
-font-size: 14px;
+font-size: 15px;
 color: #9e9e9e;
 `
 const Img = styled.img`
@@ -25,10 +25,11 @@ const Hero = () => {
   return ( 
     <Container>
       {/* <h1>Welcome to Novela, the simplest way to start publishing with Gatsby.</h1> */}
-      <h1>Jestem samoukiem i pasjonatem programowania publishing with Gatsby.</h1>
+      <h1>Zapraszam Cię do zobaczenia moich projektów </h1>
       <Autor>
         <Img src='/img/user.svg'/>
-        <p>Written by You. This is where your author bio lives. Share your work, your joys and of course, your Twitter handle.</p>
+        <p>Jestem Junior Frontend Developerem with React and Vue basics
+and some cool personal projects..</p>
       </Autor>
     </Container>
    );
