@@ -10,17 +10,15 @@ const Name = styled.div`
   padding-top: 80px;
 `
 
-const Theme = styled.div`
-  width: 15px;
-  height: 15px;
-  background-color: grey;
+const Theme = styled.button`
+padding: 5px 20px;
 `
 
-const Header = () => {
+const Header = ({changeTheme}) => {
   return (
     <Name>
       <h2>Cześć, nazywam się Łukasz</h2>
-      <Theme />
+      <Theme onClick={changeTheme}>change theme</Theme>
     </Name>
   )
 }

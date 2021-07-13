@@ -12,7 +12,7 @@ const Container = styled.section`
     opacity: 1;
   }
 `
-const ImgContainer = styled.div`
+const ImgWrapper = styled.div`
   width: 100%;
   height: auto;
   max-height: 300px;
@@ -26,7 +26,7 @@ const Image = styled.img`
   overflow: hidden;
 `
 
-const LinksContainer = styled.div`
+const LinksWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -34,8 +34,7 @@ const LinksContainer = styled.div`
   transition: 0.3s;
   border-radius: 0 0 4px 4px;
   overflow: hidden;
-  -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.7); 
-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.7);
+  box-shadow: ${(props) => props.shadow};
   ${Container}:hover & {
     opacity: 1;
   }
@@ -48,36 +47,36 @@ const Link = styled.a`
   border-right: ${(props) => (props.github ? '1px solid #424242' : null)};
   border-top: none;
   transition: 0.3s;
-  /* border-radius: ${(props) => (props.github ? "0px 0px 0px 5px" : "0px 0px 5px 0px")}; */
+  /* border-radius: ${(props) =>
+    props.github ? '0px 0px 0px 5px' : '0px 0px 5px 0px'}; */
 
   &:hover {
     flex: 1.2;
     background-color: #0277bd;
-   opacity: 1;
+    opacity: 1;
+    color: #fff;
   }
 `
 const Title = styled.h3`
   font-size: 1.4rem;
   margin-top: 12px;
 `
-
 const Description = styled.p`
   font-weight: lighter;
   line-height: 1.5rem;
   margin: 8px 0;
   opacity: 0.8;
 `
-const TechContainer = styled.div`
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-@media screen and (max-width: 1100px) {
-    
+const TechWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  @media screen and (max-width: 1100px) {
   }
 `
 const TechName = styled.p`
-margin: 5px 5px 5px 0;
-white-space: nowrap;
+  margin: 5px 5px 5px 0;
+  white-space: nowrap;
 `
 const Technologies = styled.div`
   font-weight: lighter;
@@ -87,27 +86,24 @@ const Technologies = styled.div`
   flex-wrap: wrap;
 `
 
-const Card = ({ title, description, technologies, img }) => {
-
+const Card = ({ title, description, technologies, img, theme }) => {
   return (
     <Container>
-      <ImgContainer>
+      <ImgWrapper>
         <Image src={img} />
-      </ImgContainer>
-      <LinksContainer>
-          <Link github href='https://material-ui.com/customization/color/'>
-            Github
-          </Link>
-          <Link href='https://material-ui.com/customization/color/'>
-            Podgląd
-          </Link>
-        </LinksContainer>
-
+      </ImgWrapper>
+      <LinksWrapper shadow={theme}>
+        <Link github href='https://material-ui.com/customization/color/'>
+          Github
+        </Link>
+        <Link href='https://material-ui.com/customization/color/'>Podgląd</Link>
+      </LinksWrapper>
       <Title>{title}</Title>
       <Description>{description}</Description>
-      <TechContainer>
-        <TechName>- Technologie</TechName> <Technologies>{technologies}</Technologies>
-      </TechContainer>
+      <TechWrapper>
+        <TechName>Technologie</TechName>{' '}
+        <Technologies>{technologies}</Technologies>
+      </TechWrapper>
     </Container>
   )
 }

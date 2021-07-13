@@ -1,36 +1,27 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
-import Header from '../Header/Header';
-import Hero from '../Hero/Hero';
-import Portfolio from '../Project/ProjectList'
 
 const Container = styled.div`
-box-sizing: border-box;
-position: relative;
-display: grid;
-grid-template-rows: auto;
-gap: 70px;
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 20px;
-@media screen and (max-width: 1100px) {
-   max-width: 900px;
-   gap: 30px;
-}
-@media screen and (max-width: 600px) {
-   max-width: 550px;
-   gap: 20px;
-}
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media screen and (max-width: 1100px) {
+    max-width: 900px;
+    gap: 30px;
+  }
+  @media screen and (max-width: 600px) {
+    max-width: 550px;
+    gap: 20px;
+  }
 `
 
-const Layout = () => {
-  return ( 
-    <Container>
-       <Header/>
-       <Hero/>
-       <Portfolio/>
-    </Container>
-   );
+const Layout = ({ children }) => {
+  return <Container>{children}</Container>
 }
- 
-export default Layout;
+
+export default Layout
