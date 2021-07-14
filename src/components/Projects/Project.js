@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import colors from '../../utils/colors'
 
 const Container = styled.section`
   position: relative;
@@ -15,7 +15,7 @@ const Container = styled.section`
 const ImgWrapper = styled.div`
   width: 100%;
   height: auto;
-  max-height: 300px;
+  max-height: 320px;
   position: relative;
   overflow: hidden;
 `
@@ -42,19 +42,15 @@ const LinksWrapper = styled.div`
 const Link = styled.a`
   flex: 1;
   padding: 8px;
-  /* opacity: .9; */
   text-align: center;
-  border-right: ${(props) => (props.github ? '1px solid #424242' : null)};
+  border-right: ${(props) => (props.github ? `1px solid ${colors.borderColor}` : null)};
   border-top: none;
-  transition: 0.3s;
-  /* border-radius: ${(props) =>
-    props.github ? '0px 0px 0px 5px' : '0px 0px 5px 0px'}; */
-
+  transition: background-color 0.3s, opacity 0.3s, flex 0.3s;
   &:hover {
     flex: 1.2;
-    background-color: #0277bd;
+    background-color: ${colors.blue};
     opacity: 1;
-    color: #fff;
+    color: ${colors.white};
   }
 `
 const Title = styled.h3`
@@ -62,10 +58,10 @@ const Title = styled.h3`
   margin-top: 12px;
 `
 const Description = styled.p`
-  font-weight: lighter;
+  font-weight: 400;
   line-height: 1.5rem;
-  margin: 8px 0;
-  opacity: 0.8;
+  margin: 10px 0 0;
+  opacity: 0.9;
 `
 const TechWrapper = styled.div`
   display: flex;
@@ -75,8 +71,10 @@ const TechWrapper = styled.div`
   }
 `
 const TechName = styled.p`
-  margin: 5px 5px 5px 0;
+  margin: 12px 15px 5px 0;
   white-space: nowrap;
+  font-weight: 400;
+  opacity: 0.9;
 `
 const Technologies = styled.div`
   font-weight: lighter;
@@ -84,15 +82,16 @@ const Technologies = styled.div`
   height: auto;
   display: flex;
   flex-wrap: wrap;
+  color: ${colors.white}
 `
 
-const Card = ({ title, description, technologies, img, theme }) => {
+const Card = ({ title, description, technologies, img, shadow }) => {
   return (
     <Container>
       <ImgWrapper>
         <Image src={img} />
       </ImgWrapper>
-      <LinksWrapper shadow={theme}>
+      <LinksWrapper shadow={shadow}>
         <Link github href='https://material-ui.com/customization/color/'>
           Github
         </Link>
@@ -101,7 +100,7 @@ const Card = ({ title, description, technologies, img, theme }) => {
       <Title>{title}</Title>
       <Description>{description}</Description>
       <TechWrapper>
-        <TechName>Technologie</TechName>{' '}
+        <TechName>Technologie : </TechName>{' '}
         <Technologies>{technologies}</Technologies>
       </TechWrapper>
     </Container>

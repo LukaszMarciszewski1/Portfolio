@@ -1,44 +1,37 @@
-import logo from './logo.svg'
-import './App.css'
-import { useState } from 'react'
-import styled, { ThemeProvider } from 'styled-components'
-import { lightTheme, darkTheme, GlobalStyles } from './theme/theme'
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyles } from './theme/GlobalStyles'
+import { lightTheme, darkTheme } from './theme/theme'
+
+
 import data from './data'
+import useDarkMode from './hooks/useDarkMode'
+
 import Layout from './components/Layout/Layout'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
-// import Portfolio from './components/Projects/ProjectList'
 import Contact from './components/Contact/Contact'
 import Project from './components/Projects/Project'
-import Portfolio from './components/Projects/ProjectList'
-
-const StyledApp = styled.div`
-  color: ${(props) => props.theme.fontColor};
-`
-const Span = styled.span`
-margin: 5px;
-padding: 1px 10px 4px;
-background-color: #323232;
-color: #fff
-`
+import ProjectList from './components/Projects/ProjectList'
+import Span from './components/Projects/Span'
+import ToogleButton from './components/Header/ToogleButton'
 
 function App() {
-  const [theme, setTheme] = useState('dark')
+  const [theme, themeToggler] = useDarkMode()
+  const themeMode = theme === 'dark' ? darkTheme : lightTheme
 
-  const themeToggler = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light')
-  }
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={themeMode}>
       <GlobalStyles />
-      <StyledApp>
         <Layout>
-          <Header changeTheme={() => themeToggler()} />
+          <Header>
+            <ToogleButton theme={theme} toggle={themeToggler} />
+          </Header>
           <Hero />
-          <Portfolio>
+          <ProjectList>
             {data.map((item) => (
               <Project
-                theme={theme === 'light' ? lightTheme : darkTheme}
+                shadow={themeMode}
                 key={item.index}
                 title={item.title}
                 description={item.description}
@@ -48,22 +41,83 @@ function App() {
                 img={item.img}
               />
             ))}
-          </Portfolio>
+          </ProjectList>
           <Contact />
         </Layout>
-      </StyledApp>
     </ThemeProvider>
   )
 }
 
 export default App
 
-{
-  /* <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-<GlobalStyles />
-<StyledApp>
-  Hello World
-  <button onClick={() => themeToggler()}>Change Theme</button>
-</StyledApp>
-</ThemeProvider> */
-}
+
+
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react'
+// import styled, { ThemeProvider } from 'styled-components'
+// import { lightTheme, darkTheme, GlobalStyles } from './theme/theme'
+// import data from './data'
+
+// import useDarkMode from './hooks/useDarkMode'
+
+// import Layout from './components/Layout/Layout'
+// import Header from './components/Header/Header'
+// import Hero from './components/Hero/Hero'
+// import Contact from './components/Contact/Contact'
+// import Project from './components/Projects/Project'
+// import Portfolio from './components/Projects/ProjectList'
+// import Span from './components/Projects/Span'
+// import ToogleButton from './components/Header/ToogleButton'
+
+// const StyledApp = styled.div`
+//   color: ${(props) => props.theme.fontColor};
+// `
+
+// function App() {
+//   // const [theme, setTheme] = useState('dark')
+//   const [theme, themeToggler] = useDarkMode()
+
+//   // const themeToggler = (checked) => {
+//   //   theme === 'light' ? setTheme('dark') : setTheme('light')
+//   //   setChecked({ checked })
+//   // }
+//   console.log(theme)
+//   return (
+//     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+//       <GlobalStyles />
+//       <StyledApp>
+//         <Layout>
+//           <Header>
+//             <ToogleButton theme={theme} toggle={themeToggler} />
+//           </Header>
+//           <Hero />
+//           <Portfolio>
+//             {data.map((item) => (
+//               <Project
+//                 shadow={theme === 'light' ? lightTheme : darkTheme}
+//                 key={item.index}
+//                 title={item.title}
+//                 description={item.description}
+//                 technologies={item.technologies.map((item, index) => (
+//                   <Span key={index}>{item.name}</Span>
+//                 ))}
+//                 img={item.img}
+//               />
+//             ))}
+//           </Portfolio>
+//           <Contact />
+//         </Layout>
+//       </StyledApp>
+//     </ThemeProvider>
+//   )
+// }
+
+// export default App
+

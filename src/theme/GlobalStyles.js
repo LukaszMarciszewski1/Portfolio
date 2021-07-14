@@ -1,50 +1,41 @@
-body {
-  margin: 0;
+import { createGlobalStyle } from 'styled-components'
+
+export const GlobalStyles = createGlobalStyle`
+	body {
+    margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #111216;
-  color: #fff */
-}
-
-code {
+  transition: all 0.2s linear;
+		background: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.fontColor};
+	}
+  code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-h1{
+  }
+  h1{
   font-size: 3.3rem;
   line-height: 4.3rem;
   letter-spacing: 1px;
-  /* font-weight: 700; */
-}
-h3{
+  }
+  h3{
   font-size: 1.6rem;
   line-height: 2rem; 
-}
+  }
 
-h1,h2,h4,h3{
+  h1,h2,h3,h4{
   margin: 0;
-}
+ }
 
-p{
-letter-spacing: 0.03rem;
-}
+ p{
+  letter-spacing: 0.03rem;
+ }
 
-a{
+ a{
   text-decoration: none;
   color: inherit;
-}
-
-
-@media screen and (max-width: 1200px) {
-  h1{
-    /* font-size: 2.5rem;
-    line-height: 3.3rem; */
-  }
-}
-@media screen and (max-width: 600px) {
-
-}
-
+ }
+`

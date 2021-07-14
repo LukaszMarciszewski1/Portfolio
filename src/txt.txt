@@ -1,1 +1,0 @@
-Dodać baze danych z nazwami projektów i restszta

@@ -43,7 +43,7 @@ const projects = [
     index: 3,
     img: '/img/RML.webp',
     title: 'Kalkulator',
-    description: 'Aplikacja do obliczania cen bazowych dla produktów poligraficznych',
+    description: 'Aplikacja stworzona na potrzeby RLM, umożliwia ustawienie odstępu czasu pomiędzy startem zawodników.',
     technologies: [
       {
         name: 'HTML',
@@ -60,7 +60,7 @@ const projects = [
     index: 4,
     img: '/img/olejnik.webp',
     title: 'Strona internetowa Olejnik',
-    description: 'Aplikacja do obliczania cen bazowych dla produktów poligraficznych',
+    description: 'Projekt strony internetowej stworzony dla firmy Olejnik',
     technologies: [
       {
         name: 'HTML',

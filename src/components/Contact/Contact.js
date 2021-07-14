@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import colors from '../../utils/colors'
 
 import { FaGithub } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
@@ -10,15 +11,15 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0;
-  border-top: 1px solid #424242;
+  padding: 70px 0;
+  border-top: 1px solid ${colors.borderColor};
   @media screen and (max-width: 1100px) {
   }
   @media screen and (max-width: 600px) {
   }
 `
 const ContactText = styled.h3`
-margin: 80px 0;
+margin-bottom: 50px;
 text-align: center;
 
 `
@@ -48,8 +49,7 @@ transition: .2s;
 const Contact = () => {
   return (
     <Container>
-      {/* <Copyright>©2021 VideoPlatform.pl</Copyright> */}
-      {/* <ContactText>Jestem gotowy do działania i czekam na Twoją wiadomość.</ContactText> */}
+      <ContactText>Kontakt</ContactText>
       <LinkWrapper>
       <Link rel="noopener noreferrer" target="_blank" href="https://github.com/LukaszMarciszewski1"><FaGithub />&nbsp;&nbsp;Github</Link>
         <Link href="mailto: lmarciszewski1@gmail.com"><FaEnvelope />&nbsp;&nbsp;lmarciszewski1@gmail.com</Link>

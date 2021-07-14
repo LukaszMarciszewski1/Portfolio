@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import data from '../../data'
-import Card from './Project'
+import device from '../../utils/breakpoints'
 
 const Container = styled.div`
   position: relative;
@@ -12,19 +11,13 @@ const Container = styled.div`
   row-gap: 100px;
   column-gap: 35px;
   margin-bottom: 80px;
-  @media screen and (max-width: 1100px) {
+  @media ${device.tablet} {
     row-gap: 50px;
     column-gap: 20px;
   }
-  @media screen and (max-width: 700px) {
+  @media ${device.mobile} {
     grid-template-columns: 1fr;
   }
-`
-const Span = styled.span`
-margin: 5px;
-padding: 1px 10px 4px;
-background-color: #323232;
-color: #fff
 `
 
 const Portfolio = ({children}) => {
