@@ -48,7 +48,7 @@ transition: .2s;
 
 const Contact = () => {
   return (
-    <Container>
+    <Container id='contact'>
       <ContactText>Kontakt</ContactText>
       <LinkWrapper>
       <Link rel="noopener noreferrer" target="_blank" href="https://github.com/LukaszMarciszewski1"><FaGithub />&nbsp;&nbsp;Github</Link>

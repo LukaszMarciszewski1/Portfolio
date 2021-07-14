@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import colors from '../../utils/colors'
+import LazyLoad from 'react-lazyload';
 
 const Container = styled.section`
   position: relative;
@@ -31,7 +32,6 @@ const LinksWrapper = styled.div`
   justify-content: center;
   align-items: flex-end;
   width: 100%;
-  transition: 0.3s;
   border-radius: 0 0 4px 4px;
   overflow: hidden;
   box-shadow: ${(props) => props.shadow};
@@ -45,11 +45,10 @@ const Link = styled.a`
   text-align: center;
   border-right: ${(props) => (props.github ? `1px solid ${colors.borderColor}` : null)};
   border-top: none;
-  transition: background-color 0.3s, opacity 0.3s, flex 0.3s;
+  transition: background-color 0.3s, flex 0.3s;
   &:hover {
     flex: 1.2;
     background-color: ${colors.blue};
-    opacity: 1;
     color: ${colors.white};
   }
 `
@@ -60,8 +59,8 @@ const Title = styled.h3`
 const Description = styled.p`
   font-weight: 400;
   line-height: 1.5rem;
-  margin: 10px 0 0;
-  opacity: 0.9;
+  margin: 10px 0 5px;
+  opacity: 0.6;
 `
 const TechWrapper = styled.div`
   display: flex;
@@ -89,7 +88,9 @@ const Card = ({ title, description, technologies, img, shadow }) => {
   return (
     <Container>
       <ImgWrapper>
+      <LazyLoad >
         <Image src={img} />
+        </LazyLoad>
       </ImgWrapper>
       <LinksWrapper shadow={shadow}>
         <Link github href='https://material-ui.com/customization/color/'>

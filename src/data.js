@@ -3,7 +3,9 @@ const projects = [
     index: 1,
     img: '/img/ptvs.webp',
     title: 'Strona internetowa PTVS',
-    description: 'Aplikacja do obliczania cen bazowych dla produktów poligraficznych',
+    description:
+      'Strona internetowa w trakcie budowy, aktualnie umożliwia odtwarzanie filmów oraz logowanie użytkownika.',
+    // description: 'Sterona internetowa',
     technologies: [
       {
         name: 'React',
@@ -26,7 +28,8 @@ const projects = [
     index: 2,
     img: '/img/kalkulator.webp',
     title: 'Kalkulator druku cyfrowego',
-    description: 'Aplikacja do obliczania cen bazowych dla produktów poligraficznych',
+    description:
+      'Aplikacja do obliczania cen bazowych dla produktów poligraficznych z opcją dodawania listy dostawców i wprowadzania notatek.',
     technologies: [
       {
         name: 'HTML',
@@ -42,8 +45,9 @@ const projects = [
   {
     index: 3,
     img: '/img/RML.webp',
-    title: 'Kalkulator',
-    description: 'Aplikacja stworzona na potrzeby RLM, umożliwia ustawienie odstępu czasu pomiędzy startem zawodników.',
+    title: 'Rajdowa Liga Mazowsza RC',
+    description:
+      'Aplikacja stworzona na potrzeby RLM, umożliwia ustawienie odstępu czasu pomiędzy startem zawodników. Istnieje możliwość wczytania listy zawodników z pliku Exela (xlsx).',
     technologies: [
       {
         name: 'HTML',

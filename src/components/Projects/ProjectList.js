@@ -9,7 +9,7 @@ const Container = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   row-gap: 100px;
-  column-gap: 35px;
+  column-gap: 40px;
   margin-bottom: 80px;
   @media ${device.tablet} {
     row-gap: 50px;

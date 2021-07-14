@@ -15,6 +15,7 @@ import Project from './components/Projects/Project'
 import ProjectList from './components/Projects/ProjectList'
 import Span from './components/Projects/Span'
 import ToogleButton from './components/Header/ToogleButton'
+import ScrollToContact from './components/Header/LinkToContact'
 
 function App() {
   const [theme, themeToggler] = useDarkMode()
@@ -25,6 +26,7 @@ function App() {
       <GlobalStyles />
         <Layout>
           <Header>
+            <ScrollToContact />
             <ToogleButton theme={theme} toggle={themeToggler} />
           </Header>
           <Hero />
