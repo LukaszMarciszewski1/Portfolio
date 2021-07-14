@@ -8,8 +8,11 @@ const Name = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 80px;
-  @media ${device.laptopLg} {
-    padding-top: 40px;
+  @media ${device.laptop} {
+    padding-top: 50px;
+  }
+  @media ${device.tablet} {
+    padding-top: 30px;
   }
 `
 

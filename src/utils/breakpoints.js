@@ -1,14 +1,14 @@
 const size = {
-  laptopLg: '1500px',
-  laptop: '1250px',
+  laptop: '1280px',
   tablet: '1100px',
-  mobile: '550px'
+  tabletM: '800px',
+  mobile: '600px'
 };
 
 export const device = {
-  laptopLg: `(max-width: ${size.laptopLg})`,
   laptop: `(max-width: ${size.laptop})`,
   tablet: `(max-width: ${size.tablet})`,
+  tabletM: `(max-width: ${size.tabletM})`,
   mobile: `(max-width: ${size.mobile})`,
 };
 

@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import colors from '../../utils/colors'
-import LazyLoad from 'react-lazyload';
+import device from '../../utils/breakpoints'
+import LazyLoad from 'react-lazyload'
 
 const Container = styled.section`
   position: relative;
@@ -43,7 +44,8 @@ const Link = styled.a`
   flex: 1;
   padding: 8px;
   text-align: center;
-  border-right: ${(props) => (props.github ? `1px solid ${colors.borderColor}` : null)};
+  border-right: ${(props) =>
+    props.github ? `1px solid ${colors.borderColor}` : null};
   border-top: none;
   transition: background-color 0.3s, flex 0.3s;
   &:hover {
@@ -61,19 +63,23 @@ const Description = styled.p`
   line-height: 1.5rem;
   margin: 10px 0 5px;
   opacity: 0.6;
+  @media ${device.mobile} {
+    margin: 5px 0 3px;
+  }
 `
 const TechWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  @media screen and (max-width: 1100px) {
-  }
 `
 const TechName = styled.p`
   margin: 12px 15px 5px 0;
   white-space: nowrap;
   font-weight: 400;
   opacity: 0.9;
+  @media ${device.mobile} {
+    margin: 5px 15px 5px 0;
+  }
 `
 const Technologies = styled.div`
   font-weight: lighter;
@@ -81,15 +87,15 @@ const Technologies = styled.div`
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  color: ${colors.white}
+  color: ${colors.white};
 `
 
 const Card = ({ title, description, technologies, img, shadow }) => {
   return (
     <Container>
       <ImgWrapper>
-      <LazyLoad >
-        <Image src={img} />
+        <LazyLoad>
+          <Image src={img} />
         </LazyLoad>
       </ImgWrapper>
       <LinksWrapper shadow={shadow}>

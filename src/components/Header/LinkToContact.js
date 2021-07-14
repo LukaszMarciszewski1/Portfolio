@@ -12,7 +12,7 @@ const Link = styled.div`
   padding: 0 10px;
   margin: 0 20px;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.04rem;
   vertical-align: middle;
   &:hover{
     opacity: 1;
