@@ -21,10 +21,10 @@ const ToolsWrapper = styled.div`
   align-items: center;
 `
 
-const Header = ({ children }) => {
+const Header = ({ children, title }) => {
   return (
     <Name>
-      <h2>Cześć, nazywam się Łukasz</h2>
+      <h2>{title}</h2>
       <ToolsWrapper>{children}</ToolsWrapper>
     </Name>
   )

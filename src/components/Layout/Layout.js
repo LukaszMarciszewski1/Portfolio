@@ -23,10 +23,6 @@ const Container = styled.div`
   }
 `
 
-// @media ${device.laptop} { 
-//   max-width: 800px;
-// }
-
 const Layout = ({ children }) => {
   return <Container>{children}</Container>
 }

@@ -62,7 +62,7 @@ const Description = styled.p`
   font-weight: 400;
   line-height: 1.5rem;
   margin: 10px 0 5px;
-  opacity: 0.6;
+  opacity: 0.7;
   @media ${device.mobile} {
     margin: 5px 0 3px;
   }
@@ -90,7 +90,15 @@ const Technologies = styled.div`
   color: ${colors.white};
 `
 
-const Card = ({ title, description, technologies, img, shadow }) => {
+const Project = ({
+  title,
+  description,
+  technologies,
+  img,
+  shadow,
+  live,
+  github,
+}) => {
   return (
     <Container>
       <ImgWrapper>
@@ -99,10 +107,12 @@ const Card = ({ title, description, technologies, img, shadow }) => {
         </LazyLoad>
       </ImgWrapper>
       <LinksWrapper shadow={shadow}>
-        <Link github href='https://material-ui.com/customization/color/'>
+        <Link github rel='noopener noreferrer' target='_blank' href={github}>
           Github
         </Link>
-        <Link href='https://material-ui.com/customization/color/'>Podgląd</Link>
+        <Link rel='noopener noreferrer' target='_blank' href={live}>
+          Podgląd
+        </Link>
       </LinksWrapper>
       <Title>{title}</Title>
       <Description>{description}</Description>
@@ -114,4 +124,4 @@ const Card = ({ title, description, technologies, img, shadow }) => {
   )
 }
 
-export default Card
+export default Project

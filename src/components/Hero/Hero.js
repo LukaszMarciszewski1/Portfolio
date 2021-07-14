@@ -30,16 +30,18 @@ const Img = styled.img`
   }
 `
 
-const Hero = () => {
+const Text = styled.p`
+  opacity: 0.9;
+  line-height: 1.5rem;
+`
+
+const Hero = ({ title, description, src }) => {
   return (
     <Container>
-      <h1>Zapraszam Cię do obejrzenia moich projektów </h1>
+      <h1>{title}</h1>
       <About>
-        <Img src='/img/user.svg' alt="avatar"/>
-        <p>
-          Jestem Junior Frontend Developerem with React and Vue basics and some
-          cool personal projects..
-        </p>
+        <Img src={src} alt='avatar' />
+        <Text>{description}</Text>
       </About>
     </Container>
   )

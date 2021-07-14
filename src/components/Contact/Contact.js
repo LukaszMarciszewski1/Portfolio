@@ -58,26 +58,22 @@ const Link = styled.a`
   }
 `
 
-const Contact = () => {
+const Contact = ({ github, email, phone, githubTxt, emailTxt, phoneTxt }) => {
   return (
     <Container id='contact'>
       <ContactText>Kontakt</ContactText>
       <LinkWrapper>
-        <Link
-          rel='noopener noreferrer'
-          target='_blank'
-          href='https://github.com/LukaszMarciszewski1'
-        >
+        <Link rel='noopener noreferrer' target='_blank' href={github}>
           <FaGithub />
-          &nbsp;&nbsp;Github
+          &nbsp;&nbsp;{githubTxt}
         </Link>
-        <Link href='mailto: lmarciszewski1@gmail.com'>
+        <Link href={email}>
           <FaEnvelope />
-          &nbsp;&nbsp;lmarciszewski1@gmail.com
+          &nbsp;&nbsp;{emailTxt}
         </Link>
-        <Link href='tel:504-654-093'>
+        <Link href={phone}>
           <FaMobileAlt />
-          &nbsp;&nbsp;504 654 093
+          &nbsp;&nbsp;{phoneTxt}
         </Link>
       </LinkWrapper>
     </Container>
