@@ -10,14 +10,13 @@ const Container = styled.div`
   grid-template-rows: auto;
   row-gap: 100px;
   column-gap: 40px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   @media ${device.laptop} {
     column-gap: 30px;
   }
   @media ${device.tablet} {
     row-gap: 50px;
     column-gap: 20px;
-    margin-bottom: 50px;
   }
   @media ${device.tabletM} {
     grid-template-columns: 1fr;

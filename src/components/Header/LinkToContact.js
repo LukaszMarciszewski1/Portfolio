@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import device from '../../utils/breakpoints'
 
 const Container = styled.div`
   position: relative;
@@ -17,6 +18,9 @@ const Link = styled.div`
   &:hover {
     opacity: 1;
   }
+  @media ${device.mobile} {
+    margin: 0 15px;
+  }
 `
 const Line = styled.div`
   position: relative;
@@ -28,6 +32,9 @@ const Line = styled.div`
     top: 0;
     height: 100%;
     border-right: 1px solid grey;
+  }
+  @media ${device.mobile} {
+    margin-right: 25px;
   }
 `
 

@@ -4,7 +4,7 @@ export const headerTxt = {
 
 export const heroData = {
   title: 'Zapraszam Cię do obejrzenia moich projektów ',
-  img: '/img/user.svg',
+  img: '/logo.svg',
   description:
     'Jestem Junior Frontend Developerem z podstawami React, mam pewne doświadczenie komercyjne i kilka projektów osobistych...',
 }

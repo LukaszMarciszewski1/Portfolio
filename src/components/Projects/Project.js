@@ -47,7 +47,7 @@ const Link = styled.a`
   border-right: ${(props) =>
     props.github ? `1px solid ${colors.borderColor}` : null};
   border-top: none;
-  transition: background-color 0.3s, flex 0.3s;
+  transition: background-color 0.3s, flex 0.3s, color 0.3s;
   &:hover {
     flex: 1.2;
     background-color: ${colors.blue};
@@ -55,14 +55,19 @@ const Link = styled.a`
   }
 `
 const Title = styled.h3`
-  font-size: 1.4rem;
-  margin-top: 12px;
+  font-size: 1.2rem;
+  margin-top: 14px;
+  @media ${device.mobile} {
+    font-size: 1.1rem;
+    margin-top: 12px;
+  }
 `
 const Description = styled.p`
   font-weight: 400;
   line-height: 1.5rem;
   margin: 10px 0 5px;
-  opacity: 0.7;
+  opacity: 0.8;
+  font-size: 15px;
   @media ${device.mobile} {
     margin: 5px 0 3px;
   }
@@ -76,9 +81,10 @@ const TechName = styled.p`
   margin: 12px 15px 5px 0;
   white-space: nowrap;
   font-weight: 400;
-  opacity: 0.9;
+  opacity: 0.8;
   @media ${device.mobile} {
     margin: 5px 15px 5px 0;
+    font-size: 15px;
   }
 `
 const Technologies = styled.div`
@@ -102,8 +108,8 @@ const Project = ({
   return (
     <Container>
       <ImgWrapper>
-        <LazyLoad>
-          <Image src={img} />
+        <LazyLoad once={true} height={'100%'}>
+          <Image src={img} alt={title}/>
         </LazyLoad>
       </ImgWrapper>
       <LinksWrapper shadow={shadow}>

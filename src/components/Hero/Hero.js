@@ -12,8 +12,6 @@ const About = styled.div`
   margin-top: 80px;
   display: flex;
   align-items: center;
-  font-size: 15px;
-  color: #9e9e9e;
   @media ${device.tablet} {
     margin-top: 40px;
   }
@@ -31,8 +29,13 @@ const Img = styled.img`
 `
 
 const Text = styled.p`
-  opacity: 0.9;
+  font-size: 15px;
+  opacity: 0.8;
   line-height: 1.5rem;
+  @media ${device.mobile} {
+    margin: 5px 0 3px;
+    /* font-size: 14px; */
+  }
 `
 
 const Hero = ({ title, description, src }) => {

@@ -19,13 +19,14 @@ const Container = styled.section`
   }
   @media ${device.mobile} {
     padding: 40px 0;
+    align-items: flex-start;
   }
 `
 const ContactText = styled.h3`
   margin-bottom: 50px;
   text-align: center;
   @media ${device.mobile} {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-size: 1.4rem;
   }
 `
@@ -38,6 +39,7 @@ const LinkWrapper = styled.div`
   flex-wrap: wrap;
   @media ${device.mobile} {
     flex-direction: column;
+    align-items: flex-start;
   }
 `
 

@@ -61,6 +61,7 @@ html{
   margin: 10px 0;
   @media ${device.mobile} {
     margin: 0;
+    font-size: 15px;
   }
  }
 
