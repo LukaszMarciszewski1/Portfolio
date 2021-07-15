@@ -57,7 +57,7 @@ html{
  }
 
  p{
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.04rem;
   margin: 10px 0;
   @media ${device.mobile} {
     margin: 0;

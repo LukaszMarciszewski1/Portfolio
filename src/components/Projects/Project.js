@@ -58,7 +58,7 @@ const Title = styled.h3`
   font-size: 1.2rem;
   margin-top: 14px;
   @media ${device.mobile} {
-    font-size: 1.1rem;
+    font-size: 1.12rem;
     margin-top: 12px;
   }
 `
