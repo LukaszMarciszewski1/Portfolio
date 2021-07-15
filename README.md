@@ -14,7 +14,13 @@ You can just clone repository files and run to install all dependencies:
 
 `npm install`
 
+Node (version 14.17.0)
+
 After that just run to start server:
 
 `npm start`
 
+## What I use?
+
+- React
+- Styled components
