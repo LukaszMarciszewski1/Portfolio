@@ -2,9 +2,9 @@
 
 Portfolio Junior Front-end Developer Łukasz Marciszewski.
 
-## Single page website with mine (junior front-end developer) projects.
+## Demo
 
-Single page website with mine (junior front-end developer) projects.
+Here is a working live: https://rlm-stoper.netlify.app/
 
 ## This project was bootstrapped with Create React App.
 
