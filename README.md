@@ -4,7 +4,7 @@ Portfolio Junior Front-end Developer Łukasz Marciszewski.
 
 ## Demo
 
-Here is a working live: https://rlm-stoper.netlify.app/
+Here is a working live: https://lukasz-marciszewski.netlify.app/
 
 ## This project was bootstrapped with Create React App.
 
