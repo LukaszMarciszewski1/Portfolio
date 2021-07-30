@@ -6,7 +6,7 @@ Portfolio Junior Front-end Developer Łukasz Marciszewski.
 
 Here is a working live: https://lukasz-marciszewski.netlify.app/
 
-## What I use?
+## Built with
 
 - React
 - Styled components
