@@ -49,7 +49,6 @@ const Link = styled.a`
   border-top: none;
   transition: background-color 0.3s, flex 0.3s, color 0.3s;
   &:hover {
-    flex: 1.2;
     background-color: ${colors.blue};
     color: ${colors.white};
   }
