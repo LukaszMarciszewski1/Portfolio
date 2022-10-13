@@ -1,3 +1,6 @@
+import olejnikSrc from '../assets/images/olejnik.webp'
+import trelify from '../assets/images/trellify.jpg'
+
 export const headerTxt = {
   title: 'Cześć, nazywam się Łukasz',
 }
@@ -21,7 +24,7 @@ export const contactData = {
 export const projects = [
   {
     index: 1,
-    img: '/img/ptvs.webp',
+    img: trelify,
     title: 'Strona internetowa PTVS',
     github: 'https://github.com/LukaszMarciszewski1/PTVS',
     live: 'https://ptvs-app.herokuapp.com/',
@@ -47,7 +50,7 @@ export const projects = [
   },
   {
     index: 2,
-    img: '/img/kalkulator.webp',
+    img: trelify,
     title: 'Kalkulator druku cyfrowego',
     github: 'https://github.com/LukaszMarciszewski1/PrintingHouse-calculator',
     live: 'https://cennik-druku.netlify.app/',
@@ -67,7 +70,7 @@ export const projects = [
   },
   {
     index: 3,
-    img: '/img/RML.webp',
+    img: trelify,
     title: 'Rajdowa Liga Mazowsza RC',
     github: 'https://github.com/LukaszMarciszewski1/RLM-stopwatch',
     live: 'https://rlm-stoper.netlify.app/',
@@ -87,7 +90,7 @@ export const projects = [
   },
   {
     index: 4,
-    img: '/img/olejnik.webp',
+    img: trelify,
     title: 'Strona internetowa Olejnik',
     github: 'https://github.com/LukaszMarciszewski1/Olejnik',
     live: 'http://www.olejnik.com.pl/',
@@ -101,9 +104,6 @@ export const projects = [
       },
       {
         name: 'JavaScript',
-      },
-      {
-        name: 'PHP',
       },
     ],
   },

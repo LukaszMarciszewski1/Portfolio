@@ -38,6 +38,7 @@ function App() {
             <Project
               shadow={themeMode}
               key={item.index}
+              img={item.img}
               title={item.title}
               github={item.github}
               live={item.live}
@@ -45,7 +46,6 @@ function App() {
               technologies={item.technologies.map((item, index) => (
                 <Span key={index}>{item.name}</Span>
               ))}
-              img={item.img}
             />
           ))}
         </ProjectList>

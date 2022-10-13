@@ -4,12 +4,47 @@ import colors from '../../utils/colors'
 import device from '../../utils/breakpoints'
 import LazyLoad from 'react-lazyload'
 
+const Project = ({
+  title,
+  description,
+  technologies,
+  img,
+  shadow,
+  live,
+  github,
+}) => {
+  return (
+    <Container>
+      <ImgWrapper>
+        <LazyLoad once={true} height={'100%'}>
+          <Image src={img} alt={title} />
+        </LazyLoad>
+      </ImgWrapper>
+      <LinksWrapper shadow={shadow}>
+        <Link github rel='noopener noreferrer' target='_blank' href={github}>
+          Github
+        </Link>
+        <Link rel='noopener noreferrer' target='_blank' href={live}>
+          Podgląd
+        </Link>
+      </LinksWrapper>
+      <Title>{title}</Title>
+      {/* <Description>{description}</Description> */}
+      <TechWrapper>
+        <TechName>Technologie : </TechName>{' '}
+        <Technologies>{technologies}</Technologies>
+      </TechWrapper>
+    </Container>
+  )
+}
+
 const Container = styled.section`
   position: relative;
   box-sizing: border-box;
   width: 100%;
   opacity: 0.9;
   transition: 0.2s;
+  box-shadow: ${(props) => props.shadow};
   &:hover {
     opacity: 1;
   }
@@ -94,39 +129,5 @@ const Technologies = styled.div`
   flex-wrap: wrap;
   color: ${colors.white};
 `
-
-const Project = ({
-  title,
-  description,
-  technologies,
-  img,
-  shadow,
-  live,
-  github,
-}) => {
-  return (
-    <Container>
-      <ImgWrapper>
-        <LazyLoad once={true} height={'100%'}>
-          <Image src={img} alt={title}/>
-        </LazyLoad>
-      </ImgWrapper>
-      <LinksWrapper shadow={shadow}>
-        <Link github rel='noopener noreferrer' target='_blank' href={github}>
-          Github
-        </Link>
-        <Link rel='noopener noreferrer' target='_blank' href={live}>
-          Podgląd
-        </Link>
-      </LinksWrapper>
-      <Title>{title}</Title>
-      <Description>{description}</Description>
-      <TechWrapper>
-        <TechName>Technologie : </TechName>{' '}
-        <Technologies>{technologies}</Technologies>
-      </TechWrapper>
-    </Container>
-  )
-}
 
 export default Project
